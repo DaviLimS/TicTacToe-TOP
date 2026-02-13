@@ -12,6 +12,7 @@ const play = (() => {
     const add = (mark, coord) => {
         table[coord] = mark;
     }
+
 });
 
 function roundForPlayer1(player1, mark1) {
@@ -59,6 +60,4 @@ function startGame() {
 
     const player1 = createPlayer(markInput1, nameInput1);
     const player2 = createPlayer(markInput2, nameInput2);
-
-    
 }
