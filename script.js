@@ -21,7 +21,7 @@ function roundForPlayer1(player1, mark1) {
         if (parseInt(coord) === element.indexOf()) {
             if (element != '') {
                 console.log('This coordinate is already occupied, please select another');
-                round(player1, mark1);
+                roundForPlayer1(player1, mark1);
             }
         }
     });
@@ -36,7 +36,7 @@ function roundForPlayer2(player2, mark2) {
         if (parseInt(coord) === element.indexOf()) {
             if (element != '') {
                 console.log('This coordinate is already occupied, please select another');
-                round(player2, mark2);
+                roundForPlayer2(player2, mark2);
             }
         }
     });
