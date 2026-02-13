@@ -12,7 +12,7 @@ const play = (() => {
     const add = (mark, coord) => {
         table[coord] = mark;
     }
-
+    return { add };
 });
 
 function roundForPlayer1(player1, mark1) {
