@@ -43,7 +43,7 @@ function roundForPlayer2(player2, mark2) {
         }
     });
 
-    play.add(mark2, coord);
+    play.add(mark2, parseInt(coord));
     console.log(table);
 }
 
@@ -51,7 +51,7 @@ function startGame() {
     nameInput1 = prompt("What's the name for player 1");
     nameInput2 = prompt("What's the name for player 2");
     markInput1 = prompt("Do you prefer X or O?");
-    if(markInput1 === 'x' || 'X' || 'o' || 'O') {
+    if (['x', 'X', 'o', 'O'].includes(markInput1)) {
         markInput1 === 'x' || 'X' ? 'X' : 'O';
         markInput1 === 'X' || 'O' ? markInput2 = 'O' : markInput2 = 'X';
     }
