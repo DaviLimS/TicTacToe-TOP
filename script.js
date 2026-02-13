@@ -63,7 +63,7 @@ function startGame() {
 
     for (let index = 0; index < 5; index++) {
         if (table[0] === table[1] === table[2] || table[3] === table[4] === table[5] || table[6] === table[7] === table[8]) {
-            table[0] === 'X' || table[3] === 'X' || table[6] === 'X' ? 
+            table[0] === player1.mark || table[3] === player1.mark || table[6] === player1.mark ? console.log(`${player1.name} Won!!`) : console.log(`${player2.name} Won!!`);
         }
     }
 }
