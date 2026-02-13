@@ -18,8 +18,10 @@ function roundForPlayer1(player1, mark1) {
     let coord = prompt(`${player1}, Where do you want to leave your mark? 0-8`);
     table.forEach(element => {
         if (parseInt(coord) === element.indexOf()) {
-            console.log('This coordinate is already occupied, please select another');
-            round(player1, mark1);
+            if (element != '') {
+                console.log('This coordinate is already occupied, please select another');
+                round(player1, mark1);
+            }
         }
     });
 
@@ -31,8 +33,10 @@ function roundForPlayer2(player2, mark2) {
     let coord = prompt(`${player2}, Where do you want to leave yout mark? 0-8`);
     table.forEach(element => {
         if (parseInt(coord) === element.indexOf()) {
-            console.log('This coordinate is already occupied, please select another');
-            round(player2, mark2);
+            if (element != '') {
+                console.log('This coordinate is already occupied, please select another');
+                round(player2, mark2);
+            }
         }
     });
 
