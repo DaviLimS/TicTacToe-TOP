@@ -13,7 +13,7 @@ const play = (() => {
         table[coord] = mark;
     }
     return { add };
-});
+})();
 
 function roundForPlayer1(player1, mark1) {
     let coord = prompt(`${player1}, Where do you want to leave your mark? 0-8`);
@@ -65,14 +65,17 @@ function startGame() {
 
         if (table[0] != '' && table[0] === table[1] && table[1] === table[2] || table[3] != '' && table[3] === table[4] && table[4] === table[5] && table[5] === table[6] && table[6] === table[7] && table[7] === table[8]) {
             [table[0], table[3], table[6]].includes(player1.mark) ? console.log(`${player1.name} Won!!`) : console.log(`${player2.name} Won!!`);
+            return;
         }
 
         if (table[0] != '' && table[0] === table[3] && table[3] === table[6] || table[1] != '' && table[1] === table[4] && table[4] === table[7] || table[2] != '' && table[2] === table[5] && table[5] === table[8]) {
             [table[0], table[1], table[2]].includes(player1.mark) ? console.log(`${player1.name} Won!!`) : console.log(`${player2.name} Won!!`);
+            return;
         }
 
         if (table[0] != '' && table[0] === table[4] && table[4] === table[8] || table[2] != '' && table[2] === table[4] && table[4] === table[6]) {
             [table[0], table[2]].includes(player1.mark) ? console.log(`${player1.name} Won!!`) : console.log(`$${player2.name} Won!!`);
+            return;
         }
     }
 }
