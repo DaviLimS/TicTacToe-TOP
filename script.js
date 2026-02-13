@@ -15,7 +15,7 @@ const play = (() => {
 });
 
 function roundForPlayer1(player1, mark1) {
-    let coord = prompt('Where do you want to pu your mark? 0-8');
+    let coord = prompt(`${player1}, Where do you want to leave your mark? 0-8`);
     table.forEach(element => {
         if (parseInt(coord) === element.indexOf()) {
             console.log('This coordinate is already occupied, please select another');
@@ -27,7 +27,18 @@ function roundForPlayer1(player1, mark1) {
     console.log(table);
 }
 
+function roundForPlayer2(player2, mark2) {
+    let coord = prompt(`${player2}, Where do you want to leave yout mark? 0-8`);
+    table.forEach(element => {
+        if (parseInt(coord) === element.indexOf()) {
+            console.log('This coordinate is already occupied, please select another');
+            round(player2, mark2);
+        }
+    });
 
+    play.add(mark2, coord);
+    console.log(table);
+}
 
 function startGame() {
     nameInput1 = prompt("What's the name for player 1");
