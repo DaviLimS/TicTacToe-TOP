@@ -67,7 +67,7 @@ function startGame() {
         roundForPlayer1(player1.name, player1.mark);
         roundForPlayer2(player2.name, player2.mark);
 
-        if (table[0] === table[1] === table[2] || table[3] === table[4] === table[5] || table[6] === table[7] === table[8]) {
+        if (table[0] != '' && table[0] === table[1] && table[1] === table[2] || table[3] != '' && table[3] === table[4] && table[4] === table[5] && table[5] === table[6] && table[6] === table[7] && table[7] === table[8]) {
             [table[0], table[3], table[6]].includes(player1.mark) ? console.log(`${player1.name} Won!!`) : console.log(`${player2.name} Won!!`);
         }
         if (table[0] === table[3] === table[6] || table[1] === table[4] === table[7] || table[2] === table[5] === table[8]) {
