@@ -80,5 +80,5 @@ function startGame() {
         }
     }
 }
-
+//Preciso corrigir mais alguns problemas
 startGame();
