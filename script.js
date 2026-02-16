@@ -4,6 +4,8 @@ let nameInput2;
 let markInput1;
 let markInput2;
 
+const prompt = require('prompt-sync')();
+
 function createPlayer(mark, name) {
     return { mark, name }
 }
