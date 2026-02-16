@@ -20,7 +20,7 @@ function roundForPlayer1(player1, mark1) {
     table.forEach(element => {
         if (parseInt(coord) === element.indexOf()) {
             if (element != '') {
-                console.log('This coordinate is already occupied, please select another');
+                console.log('This coordinate is already occupied or does not exist, please select another');
                 roundForPlayer1(player1, mark1);
             }
         }
@@ -29,6 +29,7 @@ function roundForPlayer1(player1, mark1) {
     play.add(mark1, coord);
     for (let index = 0; index < table.length; index++) {
         index === 3 || index === 6 ? console.log(`\n${table[index]} `) : console.log(`${table[index]} `);
+        index++;
     }
 }
 
@@ -43,7 +44,7 @@ function roundForPlayer2(player2, mark2) {
     console.log(table);
 }
 
-function startGame() {
+async function startGame() {
     nameInput1 = prompt("What's the name for player 1");
     nameInput2 = prompt("What's the name for player 2");
     markInput1 = prompt("Do you prefer X or O?");
