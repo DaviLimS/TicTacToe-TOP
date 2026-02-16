@@ -27,10 +27,7 @@ function roundForPlayer1(player1, mark1) {
     });
 
     play.add(mark1, coord);
-    for (let index = 0; index < table.length; index++) {
-        index === 3 || index === 6 ? console.log(`\n${table[index]} `) : console.log(`${table[index]} `);
-        index++;
-    }
+        console.log(`${table[0]} ${table[1]} ${table[2]}\n${table[3]} ${table[4]} ${table[5]}\n${table[6]} ${table[7]} ${table[8]}`);
 }
 
 function roundForPlayer2(player2, mark2) {
