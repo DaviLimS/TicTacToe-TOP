@@ -75,7 +75,7 @@ function startGame() { // fluxo principal do jogo
         if (!markInput1) continue; // vazio -> repetir
         markInput1 = markInput1.toUpperCase(); // normaliza para maiúscula
         if (markInput1 === 'X' || markInput1 === 'O') {
-            markInput2 = markInput1 === 'X' ? 'O' : 'X'; // define marca do outro jogador
+            markInput2 = (markInput1 === 'X' ? 'O' : 'X'); // define marca do outro jogador
             break;
         }
         console.log('Selecione X ou O.');
