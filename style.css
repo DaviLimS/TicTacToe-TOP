@@ -5,6 +5,17 @@
 }
 
 main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100vw;
     height: 100vh;
+}
+
+.table {
+    display: grid;
+    width: 40rem;
+    height: 40rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
 }
