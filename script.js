@@ -5,9 +5,11 @@ let nameInput1; // nome jogador 1
 let nameInput2; // nome jogador 2
 let markInput1; // marca jogador 1 ('X' ou 'O')
 let markInput2; // marca jogador 2
+let plays = 0;
 
 function createPlayer(mark, name) { // cria objeto jogador
-    return { mark, name };
+    let victorys = 0;
+    return { mark, name, victorys };
 }
 
 const play = (() => { // módulo simples para adicionar marca no tabuleiro
@@ -95,12 +97,14 @@ function startGame() { // fluxo principal do jogo
         if (winnerMark) {
             const winner = (player1.mark === winnerMark) ? player1 : player2; // escolhe objeto vencedor
             console.log(`${winner.name} ganhou!!`); // anuncia vencedor
+            winner.victorys++;
             return;
         }
         current = (current === player1) ? player2 : player1; // alterna jogador
     }
 
     console.log('Empate!'); // se zerou as jogadas sem vencedor
+    plays++;
 }
 
 startGame(); // inicia o jogo
