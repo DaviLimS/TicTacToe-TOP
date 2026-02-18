@@ -22,10 +22,6 @@ main {
     background-color: rgb(119, 0, 0);
 }
 
-.cell0 {
-    background-color: blue;
-}
-
-.cell3 {
-    background-color: grey;
+.cell {
+    background-color: white;
 }
