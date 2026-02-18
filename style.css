@@ -14,8 +14,18 @@ main {
 
 .table {
     display: grid;
-    width: 40rem;
-    height: 40rem;
+    width: 25rem;
+    height: 25rem;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    gap: 2px;
+    background-color: rgb(119, 0, 0);
+}
+
+.cell0 {
+    background-color: blue;
+}
+
+.cell3 {
+    background-color: grey;
 }
