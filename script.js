@@ -54,7 +54,7 @@ function askCoord(playerName) { // loop que pede coordenada válida e livre
             element.addEventListener('click', () => {
                 let coord = parseInt(element.length);
                 if (isOccupied(coord) && isValidCoord(coord)) {
-                    
+                    return coord
                 } else {
                     alert('Essa coordenada já está ocupada ou é inválida, por favor selecione outra');
                 }
