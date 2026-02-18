@@ -50,7 +50,14 @@ function askCoord(playerName) { // loop que pede coordenada válida e livre
      */
     while(true) {
         //Trocar um texto que mostre quem está jogando
-        
+        cell.forEach(element => {
+            element.addEventListener('click', () => {
+                let coord = parseInt(element.length);
+                if (isOccupied(coord) && isValidCoord(coord)) {
+                    
+                }
+            });
+        });
     }
 }
 
