@@ -1,5 +1,15 @@
 const prompt = require('prompt-sync')({ sigint: true }); // importa prompt-sync para ler do terminal
 
+const cell0 = document.querySelector('.cell0');
+const cell1 = document.querySelector('.cell1');
+const cell2 = document.querySelector('.cell2');
+const cell3 = document.querySelector('.cell3');
+const cell4 = document.querySelector('.cell4');
+const cell5 = document.querySelector('.cell5');
+const cell6 = document.querySelector('.cell6');
+const cell7 = document.querySelector('.cell7');
+const cell8 = document.querySelector('.cell8');
+
 let table = ['', '', '', '', '', '', '', '', '']; // tabuleiro 3x3 representado por array de 9 posições
 let nameInput1; // nome jogador 1
 let nameInput2; // nome jogador 2
@@ -104,3 +114,4 @@ function startGame() { // fluxo principal do jogo
 }
 
 startGame(); // inicia o jogo
+
