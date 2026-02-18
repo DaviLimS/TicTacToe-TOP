@@ -53,7 +53,13 @@ function displayBoard() {
     if (isBrowser) {
         for (let i = 0; i < 9; i++) {
             const el = cell[i];
-            if (el) el.textContent = table[i] || i; // mostra X/O ou o índice se vazia
+            if (el) {
+                el.textContent = table[i]; // mostra X/O ou o índice se vazia
+                el.style.display = 'flex';
+                el.style.justifyContent = 'center';
+                el.style.alignItems = 'center';
+                el.style.fontSize = '40px'
+            }
         }
     }
 }
@@ -97,7 +103,7 @@ function askCoord(playerName) {
                 if (!cell[i]) cell[i] = document.querySelector(`.cell${i}`); // tenta (re)buscar o elemento
                 if (cell[i]) {
                     // garante que cada célula tenha data-index correto para leitura no handler
-                    cell[i].dataset.index = i;
+                    // cell[i].dataset.index = i;
                     cell[i].addEventListener('click', handler);
                 }
             }
