@@ -195,6 +195,7 @@ async function startGame() {
 
     // loop principal de jogo: até 9 movimentos (empate) ou vitória
     while (moves < 9) {
+        document.querySelector('.player').textContent = current.name
         await roundForPlayer(current.name, current.mark); // realiza jogada
         moves++; // incrementa contador
         const winnerMark = checkWinner(); // checa se houve vencedor
