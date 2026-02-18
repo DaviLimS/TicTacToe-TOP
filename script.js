@@ -41,6 +41,7 @@ function isOccupied(c) { // verifica se célula já tem marca
 }
 
 function askCoord(playerName) { // loop que pede coordenada válida e livre
+    /**
     while (true) {
         const raw = prompt(`${playerName}, onde deseja colocar sua marca? 0-8 `); // lê input
         const coord = parseInt(raw, 10); // tenta converter para inteiro (base 10)
@@ -54,6 +55,8 @@ function askCoord(playerName) { // loop que pede coordenada válida e livre
         }
         return coord; // retorna coordenada válida e livre
     }
+     */
+    while(true) {}
 }
 
 function roundForPlayer(playerName, mark) { // executa uma jogada de um jogador
