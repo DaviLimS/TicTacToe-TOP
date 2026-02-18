@@ -6,6 +6,7 @@
 
 main {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 98.9vw;
@@ -13,7 +14,7 @@ main {
 }
 
 .player {
-
+    margin-bottom: 7%;
 }
 
 .table {
