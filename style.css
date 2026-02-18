@@ -12,10 +12,14 @@ main {
     height: 93vh;
 }
 
+.player {
+
+}
+
 .table {
     display: grid;
-    width: 25rem;
-    height: 25rem;
+    width: 20rem;
+    height: 20rem;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 2px;
